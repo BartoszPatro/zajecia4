@@ -1,2 +1,5 @@
 Krzysztof 20
 Janusz 40
+Bartosz 20
+Kamil 21
+Bartek 22
