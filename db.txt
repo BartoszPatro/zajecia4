@@ -4,3 +4,10 @@ Bartosz 20
 Kamil 21
 Bartek 22
 Grzegorz 41
+ 123456 -1 
+ 123456 -1 
+ 123456 -1 123456@stud.prz.edu.pl
+Kinga 23 -1 
+ -1 234567 234567@stud.prz.edu.pl
+Kamila 24 123465 123465@stud.prz.edu.pl
+Radek 25 0 brak

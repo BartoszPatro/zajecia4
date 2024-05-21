@@ -9,6 +9,7 @@ Kod bazowy programu Commit4_0:
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Collection;
 
 class Main {
   public static void main(String[] args) {
@@ -19,6 +20,7 @@ class Main {
       System.out.println("Wybierz opcję:");
       System.out.println("1. Dodaj nowego studenta");
       System.out.println("2. Wyswietl wszystkich studentow z bazy");
+      //System.out.println("3. Dodaj nowego studenta z innymi danymi");
 
       int opcja=scanner.nextInt();
       scanner.nextLine();
@@ -33,20 +35,39 @@ class Main {
           int wiek=scanner.nextInt();
           scanner.nextLine();
 
-          s.addStudent(new Student(imie, wiek));
+          System.out.println("Podaj NR indeksu nowego studenta: ");
+          int nrindeksu=scanner.nextInt();
+          scanner.nextLine();
+
+          System.out.println("Podaj Email nowego studenta: ");
+          String email=scanner.nextLine();  
+
+
+          s.addStudent(new Student(imie, wiek, nrindeksu, email));
           break;
           
         case 2:
+          scanner.nextLine();
           System.out.println("Wszyscy studenci z bazy: ");
           var students = s.getStudents();
           for(Student current : students) {
             System.out.println(current.ToString());         
         } 
           break;
+        //case 3:
+          //System.out.println("Podaj NR indeksu nowego studenta: ");
+          //int nrindeksu=scanner.nextInt();
+          //scanner.nextLine();
+
+          //System.out.println("Podaj Email nowego studenta: ");
+          //String email=scanner.nextLine();  
+
+          //s.addStudent(new Student(imie, wiek, nrindeksu, email));
+          //break;
+          
       }
     } catch (IOException e) {
       e.printStackTrace();
-
     }
   }
 }

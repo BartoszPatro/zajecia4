@@ -30,7 +30,8 @@ public class Service {
     return ret;
   }
 
-  public Student findStudentByName(String name) {
+  public Student findStudentByName(String name) 
+  {
     return null;
   }
 }
