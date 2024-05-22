@@ -35,19 +35,13 @@ class Main {
           int wiek=scanner.nextInt();
           scanner.nextLine();
 
-          System.out.println("Podaj NR indeksu nowego studenta: ");
-          int nrindeksu=scanner.nextInt();
-          scanner.nextLine();
-
-          System.out.println("Podaj Email nowego studenta: ");
-          String email=scanner.nextLine();  
-
-
-          s.addStudent(new Student(imie, wiek, nrindeksu, email));
+          System.out.println("Podaj nazwisko nowego studenta: ");
+          String nazwisko=scanner.nextLine();
+          
+          s.addStudent(new Student(imie, wiek, nazwisko));
           break;
           
         case 2:
-          scanner.nextLine();
           System.out.println("Wszyscy studenci z bazy: ");
           var students = s.getStudents();
           for(Student current : students) {

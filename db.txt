@@ -11,3 +11,5 @@ Kinga 23 -1
  -1 234567 234567@stud.prz.edu.pl
 Kamila 24 123465 123465@stud.prz.edu.pl
 Radek 25 0 brak
+Grzesiek 21 Marek
+Radek 31 Orkisz
