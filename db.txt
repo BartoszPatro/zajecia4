@@ -13,3 +13,6 @@ Kamila 24 123465 123465@stud.prz.edu.pl
 Radek 25 0 brak
 Grzesiek 21 Marek
 Radek 31 Orkisz
+ 21 Patro 12 10 2003
+Jan 21 Kowalski 12 9 2005
+Jan 23 Kowalski 15 11 2002

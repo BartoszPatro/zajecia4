@@ -10,6 +10,8 @@ Kod bazowy programu Commit4_0:
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Collection;
+import java.util.Date;
+import java.util.InputMismatchException;
 
 class Main {
   public static void main(String[] args) {
@@ -22,23 +24,50 @@ class Main {
       System.out.println("2. Wyswietl wszystkich studentow z bazy");
       //System.out.println("3. Dodaj nowego studenta z innymi danymi");
 
-      int opcja=scanner.nextInt();
-      scanner.nextLine();
-
+      //int opcja=scanner.nextInt();
+      //scanner.nextLine();
+      int opcja = 0;
+      try {
+        opcja = scanner.nextInt();
+      } catch (InputMismatchException e) {
+        scanner.next();
+      }
       switch(opcja)
       {
         case 1:
           System.out.println("Podaj imię nowego studenta: ");
-          String imie=scanner.nextLine();
+          String imie=scanner.next();
+          //scanner.nextLine();
 
           System.out.println("Podaj wiek nowego studenta: ");
-          int wiek=scanner.nextInt();
+          //int wiek=scanner.nextInt();
+          //scanner.nextLine();
+          int wiek = 0;
+          scanner.nextLine();
+          try {
+            wiek = scanner.nextInt();
+          } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter a valid integer for age.");
+            scanner.next(); // Clear the input buffer
+          }
           scanner.nextLine();
 
           System.out.println("Podaj nazwisko nowego studenta: ");
           String nazwisko=scanner.nextLine();
+
+          System.out.println("Podaj dzień urodzenia nowego studenta : ");
+          int dzienUrodzenia=scanner.nextInt();
+          scanner.nextLine();
+
+          System.out.println("Podaj miesiąc urodzenia nowego studenta : ");
+          int miesiacUrodzenia=scanner.nextInt();
+          scanner.nextLine();
+
+          System.out.println("Podaj rok urodzenia nowego studenta : ");
+          int rokUrodzenia=scanner.nextInt();
+          scanner.nextLine();
           
-          s.addStudent(new Student(imie, wiek, nazwisko));
+          s.addStudent(new Student(imie, wiek, nazwisko, dzienUrodzenia, miesiacUrodzenia, rokUrodzenia));
           break;
           
         case 2:
