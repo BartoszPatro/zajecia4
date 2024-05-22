@@ -16,3 +16,6 @@ Radek 31 Orkisz
  21 Patro 12 10 2003
 Jan 21 Kowalski 12 9 2005
 Jan 23 Kowalski 15 11 2002
+Piotrek 20 Noga 6 3 2003
+Radoslaw 20 Pawelek 23 4 2003
+Mateusz 22 Tyniec 11 5 2000

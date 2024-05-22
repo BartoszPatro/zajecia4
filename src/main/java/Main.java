@@ -22,6 +22,7 @@ class Main {
       System.out.println("Wybierz opcję:");
       System.out.println("1. Dodaj nowego studenta");
       System.out.println("2. Wyswietl wszystkich studentow z bazy");
+      System.out.println("3. Wyszukaj studenta po imieniu");
       //System.out.println("3. Dodaj nowego studenta z innymi danymi");
 
       //int opcja=scanner.nextInt();
@@ -77,6 +78,22 @@ class Main {
             System.out.println(current.ToString());         
         } 
           break;
+
+        case 3:
+          System.out.println("Podaj imię studenta ktorego chcesz znalesc: ");
+          String imieStudenta=scanner.next();
+          Student foundStudent=s.findStudentByName(imieStudenta);
+          if(foundStudent!=null)
+          {
+            System.out.println("Znaleziony student: ");
+            System.out.println(foundStudent.ToString());
+          }
+          else 
+          {
+            System.out.println("Nie znaleziono studenta o podanym imieniu.");
+          }
+          break;                      
+          
         //case 3:
           //System.out.println("Podaj NR indeksu nowego studenta: ");
           //int nrindeksu=scanner.nextInt();

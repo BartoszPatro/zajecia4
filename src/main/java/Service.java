@@ -30,8 +30,16 @@ public class Service {
     return ret;
   }
 
-  public Student findStudentByName(String name) 
+  public Student findStudentByName(String name) throws IOException
   {
-    return null;
+    Collection<Student> students = getStudents();
+    for(Student current : students)
+      {
+        if(current.GetName().equals(name))
+        {
+          return current;
+        }
+      }
+      return null;
   }
 }
